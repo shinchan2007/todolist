@@ -11,13 +11,13 @@ function abc() {
         const index = x.length; 
 
         todo.innerHTML += `
-            <div>
+           
                 <li id="item-${index}">
-                    <input type='checkbox' id='checkbox${index}' onclick="check(${index})"> 
-                    <b id='b-${index}'>${text.value}</b>
-                    <button id='delete${index}' onclick='deleter(${index})'>delete</button>
+                    <input type='checkbox' id='checkbox${index}' onclick="check(${index})" class='form-check-input'style='margin-top:25px;height:22px;width:22px;'> 
+                    <b id='b-${index}'class='display-5'>${text.value}</b>
+                    <button id='delete${index}' onclick='deleter(${index})' class='btn btn-outline-primary'>delete</button>
                 </li>
-            </div>
+            
             <br>`;
         text.value = '';
         // console.log(x[x.length - 1]); 
@@ -43,9 +43,10 @@ function deleter(id) {
     const checkbox = document.getElementById(`checkbox${id}`);
     if (checkbox.checked) {
         
-        did.innerHTML += `<div><li>${x[id - 1]}</li></div>`;
+        did.innerHTML += `<div><li class='display-5'>${x[id - 1]}</li></div>`;
         
         // Remove the item from the to-do list
         item.style.display = 'none';
     } 
 }
+
