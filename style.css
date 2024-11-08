@@ -205,3 +205,7 @@ body{
     margin-right: 10px;
     
 }
+
+.btn-outline-danger {
+    box-shadow: 0px 0px 10px  rgb(255, 0, 0);
+}
